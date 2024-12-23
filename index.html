@@ -411,16 +411,16 @@ nav a {
 
   <div class="game-narrative" id="game-narrative-one">
     <img src="tic-tac-think.png" alt="tic tac think" width="20%">
-
-    <p class="game-narrative-text">In a world where two forces battle for domination of a war-torn landscape, only one will draw the line and reign supreme.</p>
+<p class="game-narrative-text">Tips #1</p>
+    <p class="game-narrative-text">To successfully beat a computer in Tic Tac Thnk, start by taking the center square if it's available. This position gives you the best chance of creating multiple winning combinations. If the center is occupied, aim for one of the corners. Controlling these strategic spots can limit the computer's options and increase your chances of winning. Always look for opportunities to create a line of three while simultaneously blocking the computer from doing the same.</p>
     <button class="game-btn" id="narrative-one-btn">Next</button>
   </div>
 
   <div class="game-narrative" id="game-narrative-two">
     <img src="tic-tac-think.png" alt="tic tac think" width="20%">
 
-    <p class="game-narrative-text">The year is 2048.</p>
-    <p class="game-narrative-text">In a post apocalyptic galaxy run by giant corporations, you are a cybernetically enhanced space marine with no memory of their past.</p>
+    <p class="game-narrative-text">Tips #2</p>
+    <p class="game-narrative-text">Another critical strategy is to think ahead and anticipate the computer's moves. Since most computer algorithms will prioritize winning moves, pay attention to its potential threats. If you notice the computer has two in a row, block it immediately. Additionally, try to create forks—situations where you have two ways to win on your next turn. This forces the computer to defend against one line, allowing you to secure the win on your subsequent move.</p>
     <button class="game-btn" id="narrative-two-btn">Next</button>
   </div>
 
@@ -679,11 +679,6 @@ function makePlay(mark, row, col) {
 }
 
 function minimax(state, depth) {
-  // Inspired by http://neverstopbuilding.com/minimax
-
-  // Creating a replicated object of the game state to avoid
-  // editing the existing game state (it has been passed 'byRef')
-  // See http://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript/5344074#5344074
   var gameState = JSON.parse(JSON.stringify(state));
 
   if (gameState.gameOver) {
