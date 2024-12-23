@@ -353,6 +353,96 @@ nav a {
             background-color: #ddd;
             color: black;
         }
+  input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #loading {
+            display: none;
+            text-align: center;
+			width:200px;
+        }
+        #output {
+            text-align: center;
+            color: #2E7D32;
+            font-weight: bold;
+        }
+        #output u {
+            text-decoration: underline;
+        }
+        .warning {
+            color: red;
+            font-weight: normal;
+            margin-top: 10px;
+        }
+		.container-contact {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #f8f0c2;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 3);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        button {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button:hover {
+            background-color: #128C7E;
+        }
+        button svg {
+            margin-right: 10px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container-contact {
+            animation: fadeIn 0.5s ease-in;
+        }	
 </style>
 <style>
 /* latin-ext */
