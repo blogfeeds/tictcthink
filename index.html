@@ -936,19 +936,19 @@ function gameOver(winCase) {
   $("#game-grid").hide();
   $("#game-over").fadeIn(500);
 
-  if (winCase === game.playerMark) {
+ if (winCase === game.playerMark) {
     // Player wins
-    $("#game-end-heading").text("You have claimed victory.");
-    $("#game-end-subheading").text("May you bathe in tic-tac-toe glory.");
+    $("#game-end-heading").text("YOU WIN!");
+    $("#game-end-subheading").text("Congrats Bro!");
 
   } else if (winCase === game.aiMark) {
     // PC wins
-    $("#game-end-heading").text("Alas, the computer has claimed victory!");
-    $("#game-end-subheading").text("May they bathe their circuits in tic-tac-toe glory.");
+    $("#game-end-heading").text("COMPUTER WIN!");
+    $("#game-end-subheading").text("Your machine system better than your brain!");
   } else {
     // Draw
-    $("#game-end-heading").text("X and O, ancient enemies, have concluded their bout in a draw.");
-    $("#game-end-subheading").text("Perhaps their feud will be settled in another life, another dimension...");
+    $("#game-end-heading").text("X and O, DRAW!!");
+    $("#game-end-subheading").text("Try harder and beat your machine...");
   }
 }
 
