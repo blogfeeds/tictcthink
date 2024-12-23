@@ -2,15 +2,17 @@
 <html lang="en" prefix="og: https://ogp.me/ns#" itemscope="itemscope" itemtype="https://schema.org/Game">
 <head>
 <meta charset="utf-8">
-<title>About Tic Tac Think - A modern twist on the classic Tic Tac Toe</title>
+<title>About Tic Tac Think</title>
 <meta name="last-updated" content="2024-12-23 13:08:54 UTC">
 <meta name="user-signed-in" content="false">
 <meta name="head-cached-at" content="17331454126">
 <meta name="environment" content="production">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="canonical" href="https://tictacthink.pages.dev/about">
-<link rel="dns-prefetch" href="//tictacthink.pages.dev">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://tictacthink.pages.dev/">
+<link rel="dns-prefetch" href="//tictacthink.pages.dev/about">
 <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="profile" href="http://gmpg.org/xfn/11">
 <meta name="google-site-verification" content="lkeHAR_pL8GRVY0e790bvlqQ513x8mkz2hW2sqde1Lk" />
 <meta name="google-adsense-account" content="">
 <meta name="description" content="Play Tic Tac Think! This game is a modern twist on the classic Tic Tac Toe">
@@ -18,13 +20,13 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tictacthink.pages.dev">
 <meta property="og:title" content="Tic Tac THINK">
-<meta property="og:image" content="ogimage.jpg">
+<meta property="og:image" content="ogimage.png">
 <meta property="og:description" content="Play Tic Tac Think! This game is a modern twist on the classic Tic Tac Toe">
 <meta property="og:site_name" content="Tic Tac THINK">
 <meta name="twitter:site" content="@superhendy">
 <meta name="twitter:title" content="Tic Tac THINK">
 <meta name="twitter:description" content="Play Tic Tac Think! This game is a modern twist on the classic Tic Tac Toe">
-<meta name="twitter:image:src" content="ogimage.png">
+<meta name="twitter:image:src" content="ogimage.jpg">
 <meta name="robots" content="NOODP,INDEX,FOLLOW,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/x-icon" href="tic-tac-think.png">
@@ -38,87 +40,355 @@
 <meta name="application-name" content="Tic Tac THINK">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-  
-  
-<script src="script.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Trade+Winds|Gloria+Hallelujah|Share+Tech" rel="stylesheet">
+<script type="application/ld+json" class="rank-math-schema">
+ {
+  "@context": "https://schema.org",
+  "@graph": [{
+    "@type": "VideoGame",
+    "@id": "https://tictacthink.pages.dev/#organization",
+    "name": "Tic Tac Think",
+    "url": "https://tictacthink.pages.dev/",
+    "logo": {
+      "@type": "ImageObject",
+      "@id": "https://tictacthink.pages.dev/#logo",
+      "url": "https://tictacthink.pages.dev/tic-tac-think.png",
+      "contentUrl": "https://tictacthink.pages.dev/tic-tac-think.png",
+      "caption": "Tic Tac Think",
+      "inLanguage": "en-US",
+      "width": "512",
+      "height": "512"
+    }
+  }, {
+    "@type": "WebSite",
+    "@id": "https://tictacthink.pages.dev/#website",
+    "url": "https://tictacthink.pages.dev/",
+    "name": "Tic Tac Think",
+    "alternateName": "TTT",
+    "publisher": {
+      "@id": "https://tictacthink.pages.dev/#organization"
+    },
+    "inLanguage": "en-US",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://tictacthink.pages.dev/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "bestRating": "5",
+      "ratingCount": "168"
+    }
+  }, {
+    "@type": "CollectionPage",
+    "@id": "https://tictacthink.pages.dev/#webpage",
+    "url": "https://tictacthink.pages.dev/",
+    "name": "Tic Tac Think",
+    "about": {
+      "@id": "https://tictacthink.pages.dev/#organization"
+    },
+    "isPartOf": {
+      "@id": "https://tictacthink.pages.dev/#website"
+    },
+    "inLanguage": "en-US"
+  }]
+}
+</script>
+<script async src="script.js"></script>   
 
   
   
   
 <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f8f0c2;
-            margin: 0;
-            padding: 0;
-        }
-        nav {
-            background-color: #333;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 14px;
-        }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FDE3A7;
+  -webkit-transition-duration: 0.5s; /* Safari */
+  transition-duration: 0.5s;
+}
+
+#container {
+
+}
+
+.game-narrative {
+  margin: 0 auto; /* Center the item vertically & horizontally */
+  position: fixed; /* Break it out of the regular flow */
+  top: 0; left: 0; bottom: 0; right: 0; /* Set the bounds in which to center it, relative to its parent/container */
+  
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  resize: both;
+  /* overflow: auto; */
+  
+  max-width: 700px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.game-narrative-text {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 2em;
+  margin: 10px;
+}
+
+.game-btn {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 2em;
+  margin: 20px;
+  
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: #d35400;
+  padding: 10px 20px 10px 20px;
+  border: solid #F89406 2px;
+  text-decoration: none;
+  
+}
+
+.game-btn:hover {
+  background-color: #e67e22;
+  text-decoration: none;
+}
+
+.game-btn:focus {
+  outline:0;
+}
+
+#narrative-three-btns {
+  display: flex;
+  flex-flow: row;
+}
+
+.dramatic-text {
+  font-family: 'Trade Winds', cursive;
+  font-size: 2em;
+}
+
+.computer-threat {
+  font-family: 'Trade Winds', cursive;
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #c0392b;
+}
+
+#header {
+  text-align: center;
+  margin: 10px;
+  margin-top: 30px;
+  color: #c0392b;
+}
+
+#game-configuration {
+  
+  margin: 0 auto; /* Center the item vertically & horizontally */
+ 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  resize: both;
+  
+}
+
+#identity-selection {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.identity {
+  margin: 0px 20px;
+}
+
+#identity-label {
+  color: #FFF;
+  font-family: 'Share Tech', sans-serif;
+  font-size: 2em;
+  text-align: center;
+  vertical-align: middle;
+  margin: 20px;
+}
+
+#game-grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.cell {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #FFFFFF;
+  background-color: #121a21;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  font-size: 3em;
+  margin: 5px;
+  cursor: pointer;
+  
+  border-radius: 10px;
+  /* "pop-out" effect */
+  box-shadow: 6px 6px 0px 0px #090d10;
+  -webkit-transition-duration: 0.5s; /* Safari */
+  transition-duration: 0.5s;
+}
+
+.cell:hover {
+  color: #e74c3c;
+  background-color: #34495e;
+}
+
+.cell-selected {
+  color: #c0392b;
+  transform: translate(3px,3px);
+  box-shadow: 3px 3px 0px 0px #000000;
+  background-color: #121a21;
+  
+}
+
+.cell-selected:hover {
+  /* Disabling hover on already selected cells */
+  color: #c0392b;
+  background-color: #121a21;
+}
+
+.cell-win {
+  color: #e74c3c;
+  background-color: #34495e;
+  transition: all 1s ease-in-out;
+  transform: scale(1.05);
+}
+
+.cell-win:hover {
+  /* Disabling hover on win animation cells */
+  background-color: #34495e;
+}
+
+#game-over {
+  color: #FFF;
+  font-family: 'Share Tech', sans-serif;
+  
+  margin: 0 auto; /* Center the item vertically & horizontally */
+  position: fixed; /* Break it out of the regular flow */
+  top: 0; left: 0; bottom: 0; right: 0; /* Set the bounds in which to center it, relative to its parent/container */
+  
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  resize: both;
+  /* overflow: auto; */
+  
+  max-width: 700px;
+  flex-direction: column;
+  text-align: center;
+}
+
+#game-end-heading {
+  font-size: 2em;
+  margin: 10px;
+}
+
+#game-end-subheading {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+#game-reset-btn {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 2em;
+  margin: 20px;
+  
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: #d35400;
+  padding: 10px 20px 10px 20px;
+  border: solid #F89406 2px;
+  text-decoration: none;
+  
+}
+
+#game-reset-btn: hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
+ nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 12px; /* Mengurangi padding untuk mempersempit jarak */
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Share Tech', sans-serif;
+}
         nav a:hover {
             background-color: #ddd;
             color: black;
         }
-        .container {
-    background: #f8f0c2;
-    padding: 10px;
-    border-radius: 8px;
-    width: 50%; /* Lebar default untuk desktop */
-    margin: 20px auto;
+</style>
+<style>
+/* latin-ext */
+@font-face {
+  font-family: 'Gloria Hallelujah';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/gloriahallelujah/v22/LYjYdHv3kUk9BMV96EIswT9DIbW-MIS71zO0vg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Gloria Hallelujah';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/gloriahallelujah/v22/LYjYdHv3kUk9BMV96EIswT9DIbW-MIS11zM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Share Tech';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/sharetech/v21/7cHtv4Uyi5K0OeZ7bohU8H0JmA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Trade Winds';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/tradewinds/v17/AYCPpXPpYNIIT7h8-QenM0Jt5vM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* Media query untuk perangkat dengan lebar maksimum 768px */
-@media (max-width: 768px) {
-    .container {
-        width: 100%; /* Lebar 100% untuk ponsel */
-        margin: 10px 0; /* Mengurangi margin untuk ponsel */
-    }
-}
-        input, button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        #loading {
-            display: none;
-            text-align: center;
-			width:200px;
-        }
-        #output {
-            text-align: center;
-            color: #2E7D32;
-            font-weight: bold;
-        }
-        #output u {
-            text-decoration: underline;
-        }
-        .warning {
-            color: red;
-            font-weight: normal;
-            margin-top: 10px;
-        }
-    </style>
+</style>
 
   <script>
   window.console = window.console || function(t) {};
