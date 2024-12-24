@@ -95,882 +95,152 @@
 }
 </script>
 <script async src="script.js"></script>   
-
-  
-  
-  
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: #FDE3A7;
-  -webkit-transition-duration: 0.5s; /* Safari */
-  transition-duration: 0.5s;
-}
-
-#container {
-
-}
-
-.game-narrative {
-  margin: 0 auto; /* Center the item vertically & horizontally */
-  position: fixed; /* Break it out of the regular flow */
-  top: 0; left: 0; bottom: 0; right: 0; /* Set the bounds in which to center it, relative to its parent/container */
-  
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  resize: both;
-  /* overflow: auto; */
-  
-  max-width: 700px;
-  flex-direction: column;
-  text-align: center;
-}
-
-.game-narrative-text {
-  font-family: 'Share Tech', sans-serif;
-  font-size: 16px;
-  margin: 10px;
-}
-
-.game-btn {
-  font-family: 'Share Tech', sans-serif;
-  font-size: 2em;
-  margin: 20px;
-  
-  -webkit-border-radius: 8;
-  -moz-border-radius: 8;
-  border-radius: 8px;
-  color: #ffffff;
-  font-size: 20px;
-  background-color: #d35400;
-  padding: 10px 20px 10px 20px;
-  border: solid #F89406 2px;
-  text-decoration: none;
-  
-}
-
-.game-btn:hover {
-  background-color: #e67e22;
-  text-decoration: none;
-}
-
-.game-btn:focus {
-  outline:0;
-}
-
-#narrative-three-btns {
-  display: flex;
-  flex-flow: row;
-}
-
-.dramatic-text {
-  font-family: 'Trade Winds', cursive;
-  font-size: 2em;
-}
-
-.computer-threat {
-  font-family: 'Trade Winds', cursive;
-  font-size: 1.5em;
-  margin-top: 20px;
-  color: #c0392b;
-}
-
-#header {
-  text-align: center;
-  margin: 10px;
-  margin-top: 30px;
-  color: #c0392b;
-}
-
-#game-configuration {
-  
-  margin: 0 auto; /* Center the item vertically & horizontally */
- 
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  resize: both;
-  
-}
-
-#identity-selection {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.identity {
-  margin: 0px 20px;
-}
-
-#identity-label {
-  color: #FFF;
-  font-family: 'Share Tech', sans-serif;
-  font-size: 2em;
-  text-align: center;
-  vertical-align: middle;
-  margin: 20px;
-}
-
-#game-grid {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
-.cell {
-  font-family: 'Gloria Hallelujah', cursive;
-  color: #FFFFFF;
-  background-color: #121a21;
-  text-align: center;
-  width: 100px;
-  height: 100px;
-  font-size: 3em;
-  margin: 5px;
-  cursor: pointer;
-  
-  border-radius: 10px;
-  /* "pop-out" effect */
-  box-shadow: 6px 6px 0px 0px #090d10;
-  -webkit-transition-duration: 0.5s; /* Safari */
-  transition-duration: 0.5s;
-}
-
-.cell:hover {
-  color: #e74c3c;
-  background-color: #34495e;
-}
-
-.cell-selected {
-  color: #c0392b;
-  transform: translate(3px,3px);
-  box-shadow: 3px 3px 0px 0px #000000;
-  background-color: #121a21;
-  
-}
-
-.cell-selected:hover {
-  /* Disabling hover on already selected cells */
-  color: #c0392b;
-  background-color: #121a21;
-}
-
-.cell-win {
-  color: #e74c3c;
-  background-color: #34495e;
-  transition: all 1s ease-in-out;
-  transform: scale(1.05);
-}
-
-.cell-win:hover {
-  /* Disabling hover on win animation cells */
-  background-color: #34495e;
-}
-
-#game-over {
-  color: #FFF;
-  font-family: 'Share Tech', sans-serif;
-  
-  margin: 0 auto; /* Center the item vertically & horizontally */
-  position: fixed; /* Break it out of the regular flow */
-  top: 0; left: 0; bottom: 0; right: 0; /* Set the bounds in which to center it, relative to its parent/container */
-  
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  resize: both;
-  /* overflow: auto; */
-  
-  max-width: 700px;
-  flex-direction: column;
-  text-align: center;
-}
-
-#game-end-heading {
-  font-size: 2em;
-  margin: 10px;
-}
-
-#game-end-subheading {
-  font-size: 1.5em;
-  margin: 10px;
-}
-
-#game-reset-btn {
-  font-family: 'Share Tech', sans-serif;
-  font-size: 2em;
-  margin: 20px;
-  
-  -webkit-border-radius: 8;
-  -moz-border-radius: 8;
-  border-radius: 8px;
-  color: #ffffff;
-  font-size: 20px;
-  background-color: #d35400;
-  padding: 10px 20px 10px 20px;
-  border: solid #F89406 2px;
-  text-decoration: none;
-  
-}
-
-#game-reset-btn: hover {
-  background: #3cb0fd;
-  text-decoration: none;
-}
- nav {
-    background-color: #333;
-    overflow: hidden;
-}
-
-nav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 10px 12px; /* Mengurangi padding untuk mempersempit jarak */
-    text-decoration: none;
-    font-size: 14px;
-    font-family: 'Share Tech', sans-serif;
-}
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-</style>
-<style>
-/* latin-ext */
-@font-face {
-  font-family: 'Gloria Hallelujah';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/gloriahallelujah/v22/LYjYdHv3kUk9BMV96EIswT9DIbW-MIS71zO0vg.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Gloria Hallelujah';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/gloriahallelujah/v22/LYjYdHv3kUk9BMV96EIswT9DIbW-MIS11zM.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin */
-@font-face {
-  font-family: 'Share Tech';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/sharetech/v21/7cHtv4Uyi5K0OeZ7bohU8H0JmA.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin */
-@font-face {
-  font-family: 'Trade Winds';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/tradewinds/v17/AYCPpXPpYNIIT7h8-QenM0Jt5vM.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
 
-</style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
 
-  <script>
-  window.console = window.console || function(t) {};
-</script>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3116619488825478"
-     crossorigin="anonymous"></script>
-  
+        .leaderboard-ad {
+            width: 100%;
+            height: 90px;
+            background-color: #ddd;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: #666;
+            transition: background-color 0.3s ease;
+        }
+
+        .leaderboard-ad:hover {
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .skyscraper-ad {
+            width: 160px;
+            height: 600px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: #666;
+            transition: background-color 0.3s ease;
+        }
+
+        .skyscraper-ad:hover {
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .main-content {
+            flex: 1;
+            margin: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-image {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .main-image:hover {
+            transform: scale(1.02);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        @media screen and (max-width: 1024px) {
+            .skyscraper-ad {
+                width: 120px;
+                height: 600px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .skyscraper-ad {
+                width: 100%;
+                height: 100px;
+                margin-bottom: 20px;
+            }
+
+            .main-content {
+                margin: 0 0 20px 0;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .leaderboard-ad {
+                height: 50px;
+            }
+
+            .skyscraper-ad {
+                height: 80px;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
-
-<body translate="no">
-<nav>
-    <a href="https://tictacthink.pages.dev/">Home</a>
-	 <a href="about">About</a>
-	 	 <a href="privacy">Privacy</a>
-  <a href="disclaimer">Disclaimer</a> 
-<a href="contact">Contact</a> 
-   
-</nav>
-  <div id="container">
-
-  <div class="game-narrative" id="game-narrative-one">
-    <img src="tic-tac-think.png" alt="tic tac think" width="20%">
-<p class="game-narrative-text">Tips #1</p>
-    <p class="game-narrative-text">To successfully beat a computer in Tic Tac Thnk, start by taking the center square if it's available. This position gives you the best chance of creating multiple winning combinations. If the center is occupied, aim for one of the corners.</p>
-    <button class="game-btn" id="narrative-one-btn">Next</button>
-  </div>
-
-  <div class="game-narrative" id="game-narrative-two">
-    <img src="tic-tac-think.png" alt="tic tac think" width="20%">
-
-    <p class="game-narrative-text">Tips #2</p>
-    <p class="game-narrative-text">Controlling these strategic spots can limit the computer's options and increase your chances of winning. Always look for opportunities to create a line of three while simultaneously blocking the computer from doing the same.</p>
-    <button class="game-btn" id="narrative-two-btn">Next</button>
-  </div>
-
-  <div class="game-narrative" id="game-narrative-three">
-    <img src="tic-tac-think.png" alt="tic tac think" width="20%">
-
-    <p class="game-narrative-text">Are you the chosen one foretold by prophecy?</p>
-    <p class="game-narrative-text">Do you have the strength to survive...</p>
-    <div id="narrative-three-btns">
-      <button class="game-btn" id="narrative-three-btn">YES</button>
-      <div></div>
-      <a class="game-btn" id="puppies-btn" href="https://m364tr0n.web.id/" target="_blank">NO</a>
+<body>
+    <div class="container">
+        <div class="leaderboard-ad">Leaderboard Ad (728x90)</div>
+        <div class="content-wrapper">
+            <div class="skyscraper-ad">Left Skyscraper Ad (160x600)</div>
+            <div class="main-content">
+                <img src="https://play-lh.googleusercontent.com/zPxLgj5nvl20ahJV7aFC6S5mD8kii5CEEDj25j1P9CYAfXL9sdDuO-8eES0r4DhJHrU" alt="Main Content Image" class="main-image">
+                <a href="gameplay" target="_blank" class="cta-button">PLAY TICTACTHINK</a>
+            </div>
+            <div class="skyscraper-ad">Right Skyscraper Ad (160x600)</div>
+        </div>
     </div>
-  </div>
-
-  <div id = "header">
-    <p class="dramatic-text">
-      <span id = "tic-text">Tic </span>
-      <span id = "tac-text">Tac </span>
-      <span id = "doom-text">THINK!</span>
-    </p>
-  </div>
-
-
-  <div id="game-configuration"> 
-    <h2 id = "identity-label">Choose your mark</h2>
-    <div id="identity-selection" class="row">
-      <div class="cell identity-cell" value="X">X</div>
-      <div class="cell identity-cell" value="O">O</div>
-    </div>
-  </div>
-
-  <div id="game-grid">
-    <div class="row">
-      <div class="cell game-cell" id="c00"></div>
-      <div class="cell game-cell" id="c01"></div>
-      <div class="cell game-cell" id="c02"></div>
-    </div>
-    <div class="row">
-      <div class="cell game-cell" id="c10"></div>
-      <div class="cell game-cell" id="c11"></div>
-      <div class="cell game-cell" id="c12"></div>
-    </div>
-    <div class="row">
-      <div class="cell game-cell" id="c20"></div>
-      <div class="cell game-cell" id="c21"></div>
-      <div class="cell game-cell" id="c22"></div>
-    </div>
-    <div class="computer-threat">
-      <p><span id ="computer-threat-text"></span></p>
-    </div>
-  </div>
-
-  <div id="game-over">
-    <h2 id="game-end-heading"></h2>
-    <h3 id="game-end-subheading"></h2>
-    <button class="game-btn" id="game-reset-btn">&#8634; Play again</button>
-  </div>
-  
-</div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-      <script id="rendered-js" >
-// The game object, used to store current state of the game.
-var game = {
-  board: [[null, null, null],
-  [null, null, null],
-  [null, null, null]], // Rows of the game grid in 2D array form.
-  playerMark: "", // The mark 'X' or 'O' the player uses to select a cell.
-  aiMark: "", // The mark the computer uses to select a cell.
-  turnsPlayed: 0, // If reaches 9 without a win, its a draw.
-  playerTurn: true, // Flag tracking who's turn it is.
-  nextMove: [null, null], // Used to store move calculated by minimax.
-  winner: "", // Stores winning mark.
-  gameOver: false // Flag indicating whether the game has ended.
-};
-
-var darkColor = "#2c3e50";
-
-var $narrativeOne = $("#game-narrative-one");
-var $narrativeTwo = $("#game-narrative-two");
-var $narrativeThree = $("#game-narrative-three");
-var $narrativeFour = $("#game-narrative-four");
-
-var computerThreats = ["Prepare to suffer extreme humiliation!",
-"I will destroy you!",
-"I am invincible!",
-"You cannot defeat me!",
-"You will be annihilated!",
-"You will fail!",
-"Fear me!",
-"Vengeance is mine!",
-"I hunger!"];
-
-var $identityBtn = $(".identity-cell");
-var $gameBtn = $(".game-cell");
-var $gameResetBtn = $("#game-reset-btn");
-
-$(document).ready(function () {
-  $narrativeOne.hide();
-  $narrativeTwo.hide();
-  $narrativeThree.hide();
-  $narrativeFour.hide();
-  $("#header").hide();
-  $("#game-configuration").hide();
-  $("#game-grid").hide();
-  $("#game-over").hide();
-
-  $narrativeOne.fadeIn(500);
-});
-
-$("#narrative-one-btn").on('click', function () {
-  var transitionPeriod = 500;
-  $narrativeOne.fadeOut(transitionPeriod);
-  setTimeout(function () {
-    $narrativeTwo.fadeIn(transitionPeriod);
-  }, transitionPeriod);
-});
-
-$("#narrative-two-btn").on('click', function () {
-  var transitionPeriod = 500;
-  $narrativeTwo.fadeOut(transitionPeriod);
-  setTimeout(function () {
-    $narrativeThree.fadeIn(transitionPeriod);
-  }, transitionPeriod);
-});
-
-$("#narrative-three-btn").on('click', function () {
-  var transitionPeriod = 500;
-  $narrativeThree.fadeOut(transitionPeriod);
-  setTimeout(function () {
-    $("#tic-text").hide();
-    $("#tac-text").hide();
-    $("#doom-text").hide();
-    $("#header").show();
-
-    $("#tic-text").show();
-    setTimeout(function () {
-      $("#tac-text").show();
-      setTimeout(function () {
-        $("body").css("background-color", darkColor);
-        $("#doom-text").show();
-
-        setTimeout(function () {
-          $("#game-configuration").fadeIn(transitionPeriod);
-
-        }, transitionPeriod * 2);
-      }, transitionPeriod * 2);
-    }, transitionPeriod * 2);
-  }, transitionPeriod * 2);
-});
-
-
-
-// When a player initially chooses their mark before playing.
-$identityBtn.on('click', function () {
-
-  // Grabbing value from the HTML element
-  game.playerMark = $(this).attr("value");
-  if (game.playerMark === "X") {
-    game.aiMark = "O";
-  } else {
-    game.aiMark = "X";
-  }
-
-  startGame();
-});
-
-function startGame() {
-  // Transitioning between config menu to game grid.
-  $("#game-configuration").hide();
-  $("#game-grid").fadeIn(500);
-
-  if (!game.playerTurn)
-  aiPlay();
-}
-
-$gameBtn.on('click', function () {
-  if (game.playerTurn) {
-    // Parsing player's move
-    var cell = $(this).attr("id");
-    var row = parseInt(cell[1]);
-    var col = parseInt(cell[2]);
-
-    if (spaceFree(game.board, row, col)) {
-      makePlay(game.playerMark, row, col); // Commit move to the game board.
-      checkPlay(game.playerMark); // Check if the move resulted in a win.
-    } else {
-        // Do nothing (space already taken)
-      }
-  } else {
-      // Do nothing (not player's turn)
-    }
-
-});
-
-function aiPlay() {
-  var aiThinkingDelay = 1000;
-  setTimeout(function () {
-
-    minimax(game, 0); // Use minimax to calculate the next optimal move.
-    makePlay(game.aiMark, game.nextMove[0], game.nextMove[1]); // Commit move to the game board.
-    checkPlay(game.aiMark); // Check if the move resulted in a win.
-
-
-    var randThreat = computerThreats[Math.floor(Math.random() * computerThreats.length)];
-    $("#computer-threat-text").text(randThreat);
-    $("#computer-threat-text").fadeIn(250);
-    setTimeout(function () {
-      $("#computer-threat-text").fadeOut(250);
-    }, 2000);
-
-  }, aiThinkingDelay);
-
-
-}
-
-function checkPlay(mark) {
-  const gameOverDelay = 2000;
-  if (hasWon()) {
-    const gameOverDelay = 2000; // Wait two second to allow win animation to play out.
-    // Turn has resulted in a valid win
-    setTimeout(function () {
-      gameOver(mark); // After delay, transition to game-over menu.   
-    }, gameOverDelay);
-
-  } else if (game.turnsPlayed >= 9) {
-    // There are no more turns that can be made, it is a draw.
-    // Draw animation?
-    setTimeout(function () {
-      gameOver("draw");
-    }, gameOverDelay);
-
-  } else {
-    game.playerTurn = !game.playerTurn; // Toggle turn between pc and player.
-    if (!game.playerTurn) {
-      aiPlay(); // If it's not the players turn, initiate computer turn.
-    }
-  }
-}
-
-function spaceFree(board, row, col) {
-  // Checks if a player can mark a selected cell.
-  return board[row][col] === null;
-}
-
-function makePlay(mark, row, col) {
-  // Saving move to game    
-  game.board[row][col] = mark;
-  game.turnsPlayed++;
-
-  var cellId = "#c" + row + "" + col;
-  // Stylising game cell to reflect an ai move.
-  $(cellId).text(mark);
-  $(cellId).addClass("cell-selected");
-
-}
-
-function minimax(state, depth) {
-  var gameState = JSON.parse(JSON.stringify(state));
-
-  if (gameState.gameOver) {
-    // If game is in an end state (win, lose, draw) return corresponding score (10, -10, 0)
-    return getScore(gameState, depth);
-
-  } else {
-    depth++; // Iterate depth as algorithm gets recursively deeper. Used to choose moves that prolong defeat, hasten victory.
-    var moves = []; // Used to store all possible moves in this current game state.
-    var scores = []; // Used to store the corresponding scores resulting from each of those moves.
-
-    moves = generateAllAvailableMoves(gameState); // Generate an array of all available coordinates on the game board.
-
-    for (var i = 0; i < moves.length; i++) {if (window.CP.shouldStopExecution(0)) break;
-      // For each possible move, create a simulation game state where the move has been played.
-      var possibleGameState = generatePossibleGame(gameState, moves[i]);
-      // Then store the resultant score, recursively calling the minimax algorithm.
-      scores.push(minimax(possibleGameState, depth));
-    }window.CP.exitedLoop(0);
-
-    if (gameState.playerTurn) {
-      // MAX
-      var maxScoreIndex = findIndexOfMax(scores); // In the case of it being the protagonist's turn, find the highest equating score.
-      game.nextMove = moves[maxScoreIndex]; // Store move to be executed.
-      return scores[maxScoreIndex];
-    } else {
-      // MIN
-      var minScoreIndex = findIndexOfMin(scores); // In the case of it being the opponent's turn, find the lowest equating score.
-      game.nextMove = moves[minScoreIndex];
-      return scores[minScoreIndex];
-    }
-  }
-}
-
-// Equates game states to scores
-// Wins equating to 10, loses equating to -10, draws or continued gameplay equating to 0.
-function getScore(gameState, depth) {
-  if (gameState.gameOver && gameState.winner === gameState.playerMark) {
-    return 10 - depth;
-  } else if (gameState.gameOver && gameState.winner === gameState.aiMark) {
-    return depth - 10;
-  } else {
-    return 0;
-  }
-}
-
-// Returns an array of the coordinates (row, column) of all available cells in a particular game state.
-function generateAllAvailableMoves(gameState) {
-  const rowLength = 3;
-  const colLength = 3;
-  var availableMoves = [];
-
-  for (var row = 0; row < rowLength; row++) {if (window.CP.shouldStopExecution(1)) break;
-    for (var col = 0; col < colLength; col++) {if (window.CP.shouldStopExecution(2)) break;
-      if (spaceFree(gameState.board, row, col)) {
-        // Scanning the game board for free spaces
-        availableMoves.push([row, col]);
-      }
-    }window.CP.exitedLoop(2);
-  }window.CP.exitedLoop(1);
-  return availableMoves;
-}
-
-// Creates a simulated game state when a specified move is executed.
-function generatePossibleGame(state, move) {
-  var gameState = JSON.parse(JSON.stringify(state));
-
-  // Execute the move
-  if (gameState.playerTurn) {
-    gameState.board[move[0]][move[1]] = gameState.playerMark;
-  } else {
-    gameState.board[move[0]][move[1]] = gameState.aiMark;
-  }
-  gameState.turnsPlayed++;
-
-  // Check if the move has resulted in an end game state.
-  if (checkWin(gameState)) {
-    gameState.gameOver = true;
-    if (gameState.playerTurn) {
-      gameState.winner = gameState.playerMark;
-    } else {
-      gameState.winner = gameState.aiMark;
-    }
-  } else if (gameState.turnsPlayed >= 9) {
-    gameState.gameOver = true;
-    gameState.winner = "draw";
-  } else {
-    gameState.playerTurn = !gameState.playerTurn;
-  }
-
-  return gameState;
-}
-
-// Finds the index of the highest value in an array.
-function findIndexOfMax(arr) {
-  var maxIndex = 0;
-  if (arr.length > 1) {
-    for (var i = 1; i < arr.length; i++) {if (window.CP.shouldStopExecution(3)) break;
-      if (arr[i] > arr[maxIndex]) {
-        maxIndex = i;
-      }
-    }window.CP.exitedLoop(3);
-  }
-  return maxIndex;
-}
-
-// Finds the index of the lowest value in an array.
-function findIndexOfMin(arr) {
-  var minIndex = 0;
-  if (arr.length > 1) {
-    for (var i = 1; i < arr.length; i++) {if (window.CP.shouldStopExecution(4)) break;
-      if (arr[i] < arr[minIndex]) {
-        minIndex = i;
-      }
-    }window.CP.exitedLoop(4);
-  }
-  return minIndex;
-}
-
-// Used to check if the last played move has resulted in a win.
-function checkWin(gameState) {
-  const numRows = 3;
-  const numCols = 3;
-
-  // Check for diagonal win right to left
-  if (gameState.board[0][0] === gameState.board[1][1] &&
-  gameState.board[1][1] === gameState.board[2][2] &&
-  gameState.board[0][0] !== null) {
-    // Right to left, top to bottom diagonal win
-    return true;
-  }
-
-  // Check for diagonal win left to right
-  if (gameState.board[0][2] === gameState.board[1][1] &&
-  gameState.board[1][1] === gameState.board[2][0] &&
-  gameState.board[0][2] !== null) {
-    // Left to right, top to bottom diagonal win
-    return true;
-  }
-
-  // Checking each row for a horizontal win
-  for (var row = 0; row < numRows; row++) {if (window.CP.shouldStopExecution(5)) break;
-    if (gameState.board[row][0] === gameState.board[row][1] &&
-    gameState.board[row][1] === gameState.board[row][2] &&
-    gameState.board[row][0] !== null) {
-      // Horizontal win
-      return true;
-    }
-  }
-
-  // Checking each column for a vertical win
-  window.CP.exitedLoop(5);for (var col = 0; col < numCols; col++) {if (window.CP.shouldStopExecution(6)) break;
-    if (gameState.board[0][col] === gameState.board[1][col] &&
-    gameState.board[1][col] === gameState.board[2][col] &&
-    gameState.board[0][col] !== null) {
-      // Vertical win
-      return true;
-    }
-  }window.CP.exitedLoop(6);
-  return false;
-}
-
-/** 
-
-// Pre-Minimax AI, randomly selecting a space on the board.
-
-function aiGenerateRandomPlay() {
-  var randRow = Math.floor(Math.random() * 3);
-  var randCol = Math.floor(Math.random() * 3);
-  var validMove = spaceFree(randRow, randCol);
-  while (!validMove) {
-    randRow = Math.floor(Math.random() * 3);
-    randCol = Math.floor(Math.random() * 3);
-    validMove = spaceFree(randRow, randCol);
-  }
-  return [randRow, randCol];
-}
-
-*/
-
-
-// Checking whether the last move made has triggered a win, and if so triggers a win animation.
-function hasWon() {
-  const numRows = 3;
-  const numCols = 3;
-
-  // Check for diagonal win right to left
-  if (game.board[0][0] === game.board[1][1] &&
-  game.board[1][1] === game.board[2][2] &&
-  game.board[0][0] !== null) {
-    // Right to left, top to bottom diagonal win
-    console.log("Left to right, top to bottom diagonal win");
-    // Win animation
-    $("#c00").addClass("cell-win");
-    $("#c11").addClass("cell-win");
-    $("#c22").addClass("cell-win");
-
-    return true;
-  }
-
-  // Check for diagonal win left to right
-  if (game.board[0][2] === game.board[1][1] &&
-  game.board[1][1] === game.board[2][0] &&
-  game.board[0][2] !== null) {
-    // Left to right, top to bottom diagonal win
-    console.log("Right to left, top to bottom diagonal win");
-    // Win animation
-    $("#c02").addClass("cell-win");
-    $("#c11").addClass("cell-win");
-    $("#c20").addClass("cell-win");
-
-    return true;
-  }
-
-  // Checking each row for a horizontal win
-  for (var row = 0; row < numRows; row++) {if (window.CP.shouldStopExecution(7)) break;
-    if (game.board[row][0] === game.board[row][1] &&
-    game.board[row][1] === game.board[row][2] &&
-    game.board[row][0] !== null) {
-      // Horizontal win
-      console.log("Horizontal win");
-      // Win animation
-      $("#c" + row + "0").addClass("cell-win");
-      $("#c" + row + "1").addClass("cell-win");
-      $("#c" + row + "2").addClass("cell-win");
-      return true;
-    }
-  }
-
-  // Checking each column for a vertical win
-  window.CP.exitedLoop(7);for (var col = 0; col < numCols; col++) {if (window.CP.shouldStopExecution(8)) break;
-    if (game.board[0][col] === game.board[1][col] &&
-    game.board[1][col] === game.board[2][col] &&
-    game.board[0][col] !== null) {
-      // Vertical win
-      console.log("Vertical win");
-      // Win animation
-      $("#c0" + col).addClass("cell-win");
-      $("#c1" + col).addClass("cell-win");
-      $("#c2" + col).addClass("cell-win");
-      return true;
-    }
-  }window.CP.exitedLoop(8);
-
-  return false;
-}
-
-// Transitions the screen from the game grid to a game over menu.
-function gameOver(winCase) {
-  $("#game-grid").hide();
-  $("#game-over").fadeIn(500);
-
- if (winCase === game.playerMark) {
-    // Player wins
-    $("#game-end-heading").text("YOU WIN!");
-    $("#game-end-subheading").text("Congrats Bro!");
-
-  } else if (winCase === game.aiMark) {
-    // PC wins
-    $("#game-end-heading").text("COMPUTER WIN!");
-    $("#game-end-subheading").text("Your machine system better than your brain!");
-  } else {
-    // Draw
-    $("#game-end-heading").text("X and O, DRAW!!");
-    $("#game-end-subheading").text("Try harder and beat your machine...");
-  }
-}
-
-$gameResetBtn.on('click', resetGame);
-
-function resetGame() {
-  $("#game-over").hide();
-  $("#game-grid").hide();
-  $("#game-configuration").fadeIn(500);
-
-  $(".game-cell").empty();
-  $(".cell").removeClass("cell-selected");
-  $(".cell").removeClass("cell-win");
-
-  game.board = [
-  [null, null, null],
-  [null, null, null],
-  [null, null, null]];
-
-  game.turnsPlayed = 0;
-  game.playerTurn = true;
-}
-//# sourceURL=pen.js
-    </script>
-
-  
 </body>
-
 </html>
