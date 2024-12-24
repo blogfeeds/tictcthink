@@ -251,7 +251,29 @@ nav a {
     </style>
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3116619488825478"
      crossorigin="anonymous"></script>
-	
+	<script>
+        // Memuat skrip iklan AdSense
+        var adsenseScript = document.createElement('script');
+        adsenseScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9930653621821282";
+        adsenseScript.async = true;
+        adsenseScript.crossOrigin = "anonymous";
+        document.head.appendChild(adsenseScript);
+
+        // Menambahkan elemen iklan
+        var adSlot = document.createElement('ins');
+        adSlot.className = "adsbygoogle";
+        adSlot.style.display = "block";
+        adSlot.style.width = "300px"; // Ganti dengan ukuran iklan yang diinginkan
+        adSlot.style.height = "250px"; // Ganti dengan ukuran iklan yang diinginkan
+        adSlot.setAttribute("data-ad-client", "ca-pub-9930653621821282");
+        adSlot.setAttribute("data-ad-slot", "YOUR_AD_SLOT_ID"); // Ganti dengan ID slot iklan yang sesuai
+        adSlot.setAttribute("data-ad-format", "auto");
+
+        document.getElementById('ads-container').appendChild(adSlot);
+
+        // Meminta iklan untuk ditampilkan
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </head>
 <body>
 <nav>
@@ -263,14 +285,14 @@ nav a {
    
 </nav>
     <div class="container">
-        <div class="leaderboard-ad">Responsive Ads Here</div>
+        <div class="leaderboard-ad" id="ads-container"></div>
         <div class="content-wrapper">
-            <div class="skyscraper-ad">Responsive Ads Here</div>
+            <div class="skyscraper-ad" id="ads-container"></div>
             <div class="main-content">
                 <img src="https://play-lh.googleusercontent.com/zPxLgj5nvl20ahJV7aFC6S5mD8kii5CEEDj25j1P9CYAfXL9sdDuO-8eES0r4DhJHrU" alt="Main Content Image" class="main-image">
                 <a href="gameplay" target="_blank" class="cta-button">PLAY TICTACTHINK</a>
             </div>
-            <div class="skyscraper-ad">Responsive Ads Here</div>
+            <div class="skyscraper-ad" id="ads-container">/div>
         </div>
     </div>
 </body>
